@@ -1,13 +1,8 @@
 import { useState } from "react";
-
-interface IResultSectionProps {
-  result: string;
-  message: string | undefined;
-}
-
-function ResultSection({ result, message }: IResultSectionProps) {
-  return <div className="p-10"></div>;
-}
+import { QuestionSection } from "./components/question-section";
+import { ResultSection } from "./components/result-section";
+import { MoreInfoSection } from "./components/more-info-section";
+import { LegalSection } from "./components/legal-section";
 
 function App() {
   const [food, setFood] = useState<string>("Äpfel");
@@ -15,19 +10,13 @@ function App() {
   const [message, setMessage] = useState<string | undefined>(undefined);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="bg-sky-100 text-center p-10">
-        <h1 className="text-3xl text-slate-900 leading-10">
-          Kann mein Hund{" "}
-          <input
-            value={food}
-            onChange={(e) => setFood(e.target.value)}
-            className="bg-sky-100 border-b-2 border-slate-900"
-          />{" "}
-          essen?
-        </h1>
+    <div className="min-h-screen flex flex-col bg-slate-900 text-slate-50">
+      <div className="h-screen">
+        <QuestionSection food={food} setFood={setFood} />
+        <ResultSection result={result} message={message} />
       </div>
-      <ResultSection result={result} message={message} />
+      <MoreInfoSection />
+      <LegalSection />
     </div>
   );
 }
