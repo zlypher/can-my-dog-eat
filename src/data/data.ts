@@ -1,8 +1,11 @@
+export type FoodCategory = "unavailable" | "fruit" | "x";
+export type FoodRating = "unavailable" | "very bad" | "bad" | "medium" | "good" | "very good";
+
 export type FoodData = {
   id: string;
-  category: "unavailable" | "fruit" | "x";
+  category: FoodCategory;
   tags: string[];
-  rating: "unavailable" | "very bad" | "bad" | "medium" | "good" | "very good";
+  rating: FoodRating;
   moreInfo: string;
 };
 
@@ -122,9 +125,9 @@ export const data: FoodData[] = [
   {
     id: "peach",
     category: "fruit",
-    rating: "unavailable",
+    rating: "bad",
     tags: ["pfirsich"],
-    moreInfo: "Lorem Ipsum",
+    moreInfo: "Die Frucht an sich ist nicht giftig, allerdings enthält der Kern für Hunde gefährliche Giftstoffe.",
   },
   {
     id: "plum",

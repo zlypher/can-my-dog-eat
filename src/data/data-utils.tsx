@@ -10,7 +10,7 @@ const fuse = new Fuse(foodList, {
 
 export function findMatch(food: string): FoodData {
   const result = fuse.search(food);
-  if (!result) {
+  if (!result || result.length === 0) {
     return FOOD_NOT_FOUND;
   }
 
