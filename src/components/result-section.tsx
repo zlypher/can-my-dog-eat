@@ -1,8 +1,9 @@
+import { FoodData } from "../data/data";
+
 interface IResultSectionProps {
-  result: string;
-  message: string | undefined;
+  result: FoodData | null;
 }
 
-export function ResultSection({ result, message }: IResultSectionProps) {
+export function ResultSection({ result }: IResultSectionProps) {
   return <div className="p-10"></div>;
 }

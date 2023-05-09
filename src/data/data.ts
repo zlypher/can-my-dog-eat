@@ -1,15 +1,21 @@
 export type FoodData = {
   id: string;
-  names: string[];
+  tags: string[];
   rating: "unavailable" | "very bad" | "bad" | "medium" | "good" | "very good";
   moreInfo: string;
 };
 
 export const data: FoodData[] = [
   {
-    id: "apfel",
+    id: "apple",
     rating: "good",
-    names: ["apfel", "äpfel"],
+    tags: ["apfel", "äpfel"],
+    moreInfo: "Lorem Ipsum",
+  },
+  {
+    id: "pear",
+    rating: "good",
+    tags: ["birne"],
     moreInfo: "Lorem Ipsum",
   },
 ];
@@ -17,6 +23,6 @@ export const data: FoodData[] = [
 export const FOOD_NOT_FOUND: FoodData = {
   id: "not-found",
   rating: "unavailable",
-  names: [],
+  tags: [],
   moreInfo: "Lorem Ipsum, we don't know",
 };
