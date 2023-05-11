@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "preact/hooks";
 import { QuestionSection } from "./components/question-section";
 import { ResultSection } from "./components/result-section";
 import { MoreInfoSection } from "./components/more-info-section";
