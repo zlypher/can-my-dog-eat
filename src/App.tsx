@@ -1,7 +1,6 @@
 import { useEffect, useState } from "preact/hooks";
 import { QuestionSection } from "./components/question-section";
 import { ResultSection } from "./components/result-section";
-import { MoreInfoSection } from "./components/more-info-section";
 import { LegalSection } from "./components/legal-section";
 import { findMatch } from "./data/data-utils";
 import { FOOD_NOT_FOUND, FoodData } from "./data/data";
