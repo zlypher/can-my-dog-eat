@@ -13,12 +13,12 @@ export function LegalSection({}: ILegalSectionProps) {
           Die hier dargestellten Informationen basieren auf folgenden Quellen:
         </p>
         <ul className="list-disc list-inside mb-4">
-          <li>
+          <li className="mb-2">
             <a href="https://www.hundeo.com/gesundheit/was-duerfen-hunde-nicht-essen">
               hundeo.com
             </a>
           </li>
-          <li>
+          <li className="mb-2">
             <a href="https://www.purina.at/artikel/hunde/fuettern/was-hunde-fressen/was-duerfen-hunde-essen">
               purina.at
             </a>
